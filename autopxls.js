@@ -205,7 +205,7 @@ function AutoPXLS(images){
           var result = painters[i].drawImage();
 
           if(result > 0){
-            setTimeout(draw, result*1000);
+            setTimeout(draw, 1000);
             return;
           }
           else{
@@ -216,7 +216,7 @@ function AutoPXLS(images){
           continue;
         }
       }
-      setTimeout(draw, 3000);
+      setTimeout(draw, 1000);
     }
 
     return;
