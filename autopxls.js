@@ -1,7 +1,7 @@
 
 
 
-function AutoPXLS(images){
+function AutoPXLS(images, tim, dif){
 //
 
   function shuffle(array) {
@@ -197,7 +197,7 @@ function AutoPXLS(images){
     var timer = (App.cooldown-(new Date).getTime())/1E3;
     if(0<timer){
       console.log("timer: " + timer);
-      setTimeout(draw, 500);
+      setTimeout(draw, tim);
     }
     else{
       for(var i = 0; i < painters.length; i++){
@@ -205,7 +205,7 @@ function AutoPXLS(images){
           var result = painters[i].drawImage();
 
           if(result > 0){
-            setTimeout(draw, 1000);
+            setTimeout(draw, dif);
             return;
           }
           else{
@@ -216,7 +216,7 @@ function AutoPXLS(images){
           continue;
         }
       }
-      setTimeout(draw, 1000);
+      setTimeout(draw, dif);
     }
 
     return;
